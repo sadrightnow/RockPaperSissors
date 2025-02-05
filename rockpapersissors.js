@@ -58,32 +58,27 @@ function playRound(humanChoice, computerChoice) {
 getHumanChoice();
 getComputerChoice();
 playRound(humanChoice, computerChoice)
-console.log(computerScore);
-console.log(humanScore);
+
 
 getHumanChoice();
 getComputerChoice();
 playRound(humanChoice, computerChoice)
-console.log(computerScore);
-console.log(humanScore);
+
 
 getHumanChoice();
 getComputerChoice();
 playRound(humanChoice, computerChoice)
-console.log(computerScore);
-console.log(humanScore);
+
 
 getHumanChoice();
 getComputerChoice();
 playRound(humanChoice, computerChoice)
-console.log(computerScore);
-console.log(humanScore);
+
 
 getHumanChoice();
 getComputerChoice();
 playRound(humanChoice, computerChoice)
-console.log(computerScore);
-console.log(humanScore);
+
 
 if (computerScore === humanScore) {
 	console.log("DRAW");
