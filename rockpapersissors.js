@@ -1,6 +1,7 @@
 const options = ["rock", "paper", "sissors"];
 let humanScore = 0
 let computerScore = 0
+let gameCount = 0
 
 function getRandomInt(max) {
 	return Math.floor(Math.random() * max);
@@ -8,14 +9,13 @@ function getRandomInt(max) {
 
 function getComputerChoice(choose) {
 	number = (getRandomInt(3));
-	opponent = (options[number]);
+	computerChoice = (options[number]);
 	console.log(options[number]);	
 }
 
 function getHumanChoice(choose) {
-	let HumanChoice = prompt("rock, paper, or sissors?", "rock")
-	console.log(HumanChoice);
-	if (options.includes(HumanChoice)) {
+	humanChoice = prompt("rock, paper, or sissors?", "rock")
+	if (options.includes(humanChoice)) {
 		console.log("Valid choice!");
 	} 
 	else {
@@ -27,13 +27,74 @@ function getHumanChoice(choose) {
 
 
 
+function playRound(humanChoice, computerChoice) {
+	if (humanChoice === computerChoice) {
+		console.log("Draw!");
+	}
+	else if (humanChoice === "rock" && computerChoice === "sissors") {
+		console.log("Win!");
+		humanScore += 1
+		gameCount += 1
+	}
+	else if (humanChoice === "paper" && computerChoice === "rock") {
+		console.log("Win!");
+		humanScore += 1
+		gameCount += 1
+	}
+	else if (humanChoice === "sissors" && computerChoice === "paper") {
+		console.log("Win!");
+		humanScore += 1
+		gameCount += 1
+	}
+	else {
+		console.log("Lose!");
+		computerScore +=1
+		gameCount += 1
+	}
 
-function playRound(play) {
-	getHumanChoice();
-	getComputerChoice();
-switch(favDrink) {
-	case "Coca-Cola":
 
 }
 
+getHumanChoice();
+getComputerChoice();
+playRound(humanChoice, computerChoice)
+console.log(computerScore);
+console.log(humanScore);
+
+getHumanChoice();
+getComputerChoice();
+playRound(humanChoice, computerChoice)
+console.log(computerScore);
+console.log(humanScore);
+
+getHumanChoice();
+getComputerChoice();
+playRound(humanChoice, computerChoice)
+console.log(computerScore);
+console.log(humanScore);
+
+getHumanChoice();
+getComputerChoice();
+playRound(humanChoice, computerChoice)
+console.log(computerScore);
+console.log(humanScore);
+
+getHumanChoice();
+getComputerChoice();
+playRound(humanChoice, computerChoice)
+console.log(computerScore);
+console.log(humanScore);
+
+if (computerScore === humanScore) {
+	console.log("DRAW");
+} else if (computerScore >= humanScore) {
+	console.log("Lose");
+} else {
+	console.log("Win");
 }
+
+
+
+
+
+
