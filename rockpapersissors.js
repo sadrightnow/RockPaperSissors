@@ -1,4 +1,4 @@
-const options = ["rock", "paper", "sissors"];
+const options = ["rock", "paper", "scissors"];
 let humanScore = 0
 let computerScore = 0
 let gameCount = 0
@@ -14,7 +14,7 @@ function getComputerChoice(choose) {
 }
 
 function getHumanChoice(choose) {
-	humanChoice = prompt("rock, paper, or sissors?", "rock")
+	humanChoice = prompt("rock, paper, or scissors?", "rock")
 	if (options.includes(humanChoice)) {
 		console.log("Valid choice!");
 	} 
@@ -31,7 +31,7 @@ function playRound(humanChoice, computerChoice) {
 	if (humanChoice === computerChoice) {
 		console.log("Draw!");
 	}
-	else if (humanChoice === "rock" && computerChoice === "sissors") {
+	else if (humanChoice === "rock" && computerChoice === "scissors") {
 		console.log("Win!");
 		humanScore += 1
 		gameCount += 1
@@ -41,7 +41,7 @@ function playRound(humanChoice, computerChoice) {
 		humanScore += 1
 		gameCount += 1
 	}
-	else if (humanChoice === "sissors" && computerChoice === "paper") {
+	else if (humanChoice === "scissors" && computerChoice === "paper") {
 		console.log("Win!");
 		humanScore += 1
 		gameCount += 1
@@ -83,9 +83,9 @@ playRound(humanChoice, computerChoice)
 if (computerScore === humanScore) {
 	console.log("DRAW");
 } else if (computerScore >= humanScore) {
-	console.log("Lose");
+	console.log("You lost best of five.");
 } else {
-	console.log("Win");
+	console.log("You won best of five.");
 }
 
 
